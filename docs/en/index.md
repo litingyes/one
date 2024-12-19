@@ -6,4 +6,3 @@ hero:
   text: The singer of knowledge
   tagline: Record learning & Summarize life
 ---
-
