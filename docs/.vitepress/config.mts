@@ -10,7 +10,7 @@ export default defineConfig({
       description: "记录学习 & 总结人生",
       themeConfig: {
         footer: {
-          message: '基于 CC0 许可发布',
+          message: '基于 CC0-1.0 许可发布',
           copyright: '版权所有 © 2024-当前 刘惠'
         },
         docFooter: {
@@ -33,7 +33,7 @@ export default defineConfig({
       description: "The singer of knowledge",
       themeConfig: {
         footer: {
-          message: 'Released under the CC0 License.',
+          message: 'Released under the CC0-1.0 License.',
           copyright: 'Copyright © 2024-present Liting'
         },
         docFooter: {
