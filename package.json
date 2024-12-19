@@ -1,0 +1,12 @@
+{
+  "name": "one",
+  "description": "The singer of knowledge",
+  "scripts": {
+    "dev": "vitepress dev docs --port 3333",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
