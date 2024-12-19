@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-
   locales: {
     root: {
       label: "简体中文",
@@ -51,6 +50,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
+    logo: '/logo.png',
     externalLinkIcon: true,
     search: {
       provider: 'local',
@@ -79,4 +79,5 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/litingyes/one' }
     ]
   },
+  head: [['link', { rel: 'icon', href: '/logo.png' }]]
 })
