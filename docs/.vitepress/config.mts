@@ -40,8 +40,8 @@ export default defineConfig({
     root: {
       label: "简体中文",
       lang: "zh-CN",
-      title: "知识的歌者",
-      description: "记录学习 & 总结人生",
+      title: "One",
+      description: "知识的歌者",
       themeConfig: {
         footer: {
           message: '基于 CC0-1.0 许可发布',
