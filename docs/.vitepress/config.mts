@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
@@ -83,4 +84,7 @@ export default defineConfig({
       }
     }
   },
+  vite: {
+    plugins: [UnoCSS()]
+  }
 })
