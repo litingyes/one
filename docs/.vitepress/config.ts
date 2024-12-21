@@ -9,6 +9,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     externalLinkIcon: true,
+    outline: [2, 4],
     search: {
       provider: 'local',
       options: {
@@ -58,6 +59,17 @@ export default defineConfig({
         lastUpdated: {
           text: '最后更新于',
         },
+        nav: [
+          {
+            text: '前端',
+            items: [
+              {
+                text: 'Vue.js',
+                link: '/fe/vue/request'
+              }
+            ]
+          }
+        ]
       }
     },
     en: {
@@ -80,11 +92,25 @@ export default defineConfig({
         },
         lastUpdated: {
           text: 'Last updated at',
-        }
+        },
+        nav: [
+          {
+            text: 'Front end',
+            items: [
+              {
+                text: 'Vue.js',
+                link: '/en/fe/vue/request'
+              }
+            ]
+          }
+        ]
       }
     }
   },
   vite: {
     plugins: [UnoCSS()]
+  },
+  markdown: {
+    lineNumbers:true
   }
 })
