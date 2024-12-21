@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import UnoCSS from 'unocss/vite'
+import {resolveURL} from 'ufo'
 
 export default defineConfig({
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
@@ -107,10 +108,42 @@ export default defineConfig({
       }
     }
   },
+  transformPageData(pageData,ctx) {
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push(
+      [
+        'meta',
+        {
+          author: 'Liting'
+        }
+      ],
+      [
+        'meta',
+        {
+          name: 'og:title',
+          content: pageData.title
+        }
+      ],
+      [
+        'meta',
+        {
+          name: 'og:type',
+          content: 'article'
+        }
+      ],
+      [
+        'meta',
+        {
+          name: 'og:url',
+          content: resolveURL(ctx.siteConfig.sitemap!.hostname, pageData.filePath).replace('.md' ,'.html')
+        }
+      ],
+    )
+  },
   vite: {
     plugins: [UnoCSS()]
   },
   markdown: {
-    lineNumbers:true
+    lineNumbers: true
   }
 })
