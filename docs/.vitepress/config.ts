@@ -70,7 +70,20 @@ export default defineConfig({
               }
             ]
           }
-        ]
+        ],
+        sidebar: {
+          '/fe/': [
+            {
+              text: 'Vue.js',
+              items: [
+                {
+                  text: 'Vue.js 生态最佳请求方案',
+                  link: '/fe/vue/request'
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     en: {
@@ -104,7 +117,20 @@ export default defineConfig({
               }
             ]
           }
-        ]
+        ],
+        sidebar: {
+          '/en/fe/': [
+            {
+              text: 'Vue.js',
+              items: [
+                {
+                  text: 'Best Request Solution in Vue.js Ecosystem',
+                  link: '/en/fe/vue/request'
+                }
+              ]
+            }
+          ]
+        }
       }
     }
   },
