@@ -96,7 +96,7 @@ export default defineConfig({
         },
         nav: [
           {
-            text: 'Front end',
+            text: 'Front End',
             items: [
               {
                 text: 'Vue.js',
