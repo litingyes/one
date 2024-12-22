@@ -1,9 +1,23 @@
 import { defineConfig } from 'vitepress'
 import UnoCSS from 'unocss/vite'
-import {resolveURL} from 'ufo'
+import { resolveURL } from 'ufo'
 
 export default defineConfig({
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-JYEBV84K3Q' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYEBV84K3Q');`
+    ]
+  ],
   sitemap: {
     hostname: 'https://one.litingyes.top'
   },
@@ -134,7 +148,7 @@ export default defineConfig({
       }
     }
   },
-  transformPageData(pageData,ctx) {
+  transformPageData(pageData, ctx) {
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push(
       [
@@ -161,7 +175,7 @@ export default defineConfig({
         'meta',
         {
           name: 'og:url',
-          content: resolveURL(ctx.siteConfig.sitemap!.hostname, pageData.filePath).replace('.md' ,'.html')
+          content: resolveURL(ctx.siteConfig.sitemap!.hostname, pageData.filePath).replace('.md', '.html')
         }
       ],
     )
