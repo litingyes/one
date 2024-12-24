@@ -83,6 +83,15 @@ export default defineConfig({
                 link: '/fe/vue/request'
               }
             ]
+          },
+          {
+            text: '后端',
+            items: [
+              {
+                text: '技术规范',
+                link: '/be/spec/restful-api'
+              }
+            ]
           }
         ],
         sidebar: {
@@ -128,6 +137,15 @@ export default defineConfig({
               {
                 text: 'Vue.js',
                 link: '/en/fe/vue/request'
+              }
+            ]
+          },
+          {
+            text: 'Back End',
+            items: [
+              {
+                text: 'Spec',
+                link: '/en/be/spec/restful-api'
               }
             ]
           }
@@ -184,6 +202,10 @@ export default defineConfig({
     plugins: [UnoCSS()]
   },
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    theme: {
+      light: 'catppuccin-latte',
+      dark:'catppuccin-mocha'
+    }
   }
 })
